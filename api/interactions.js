@@ -6,7 +6,7 @@ const { getJson, setJson, mgetJson } = require('../lib/vercelStore');
 const { commands } = require('../lib/commands');
 
 const PUBLIC_KEY = process.env.DISCORD_PUBLIC_KEY;
-const APP_URL = process.env.APP_URL || ''; // Vercel URL
+const APP_URL = process.env.APP_URL || 'https://wwm-discord-emb.vercel.app/'; // Vercel URL
 const CREATE_FLOW_TIMEOUT_MS = 2 * 60 * 1000;
 const flowTimezoneByNonce = new Map();
 const flowMediaUrlByNonce = new Map();

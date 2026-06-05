@@ -6,7 +6,7 @@ const config = {
   title: 'Where Winds Meed - Event Manager Bot',
   tagline: 'Documentation du bot Where Winds Meet - Event Manager',
   favicon: 'img/favicon.ico',
-  url: '', //URL Vercel du bot
+  url: 'https://wwm-discord-emb.vercel.app/', //URL Vercel du bot
   baseUrl: '/',
   organizationName: 'Iron Racletteurs',
   projectName: 'Where Winds Meet - Event Manager Bot',
