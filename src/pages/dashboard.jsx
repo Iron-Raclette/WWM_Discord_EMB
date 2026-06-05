@@ -229,7 +229,7 @@ export default function DashboardPage() {
     setPhrases(config.phrases || []);
     setPendingPhrases(config.phrasesPending || []);
 
-    const guild = nextSettings.guildId || settings.guildId || '1512499011641413803'; //ID A CHANGER ICI - CHANNEL
+    const guild = nextSettings.guildId || settings.guildId || '1512143388940566588'; //ID A CHANGER ICI - CHANNEL
     const [current, channelsRes] = await Promise.all([
       api(`/api/events?guild_id=${guild}&only=current`),
       api(`/api/guild-channels?guild_id=${guild}`)

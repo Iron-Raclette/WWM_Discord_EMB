@@ -6,7 +6,7 @@ const PHRASES_KEY = 'config:phrases';
 const PHRASES_PENDING_KEY = 'config:phrases_pending';
 
 const defaultSettings = { // ID TO CHANGE HERE
-  guildId: process.env.DEFAULT_GUILD_ID || '1512143388940566588', // Discord Server ID? -- Current ID = Useless Channel Test
+  guildId: process.env.DEFAULT_GUILD_ID || '1512143388940566588', // Discord Server ID
   channelId: process.env.DEFAULT_CHANNEL_ID || '1512143389859250301', //General Channel?
   guildEventChannelId: process.env.GUILD_EVENT_CHANNEL_ID || '1512499011641413803',
   timezone: process.env.EVENT_TIMEZONE || 'Europe/Paris',
