@@ -6,7 +6,7 @@ import DocCardList from '@theme/DocCardList';
 
 # Guides
 
-The following guides are designed to introduce you to all of Divinité's core functionality.
+The following guides are designed to introduce you to all of EMB's core functionality.
 They can be read in any order, but they're organized from basic to more advanced features.
 
 <DocCardList />

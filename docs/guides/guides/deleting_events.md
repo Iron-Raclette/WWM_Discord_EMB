@@ -1,5 +1,5 @@
 ---
-description: Learn how to delete Divinité events.
+description: Learn how to delete Martin events.
 slug: /deleting_events
 sidebar_position: 2
 ---
@@ -15,7 +15,7 @@ Deleting the event message will instantly delete the event. If the `Edit`
 button is clicked, a confirmation prompt will be sent via a direct message.
 
 :::note
-When an event is deleted that Divinité has created a thread for, the thread
+When an event is deleted that Martin has created a thread for, the thread
 is automatically archived.
 :::
 
@@ -24,7 +24,7 @@ is automatically archived.
 Often we want to remove an event from Discord, but retain the ability to
 look at that event later. Retaining event history is made possible by
 archiving them; these events are removed from Discord, but are still
-available on the [dashboard](https://divinite-bot.dev/dashboard).
+available on the [dashboard](https://wwm-discord-emb.vercel.app/dashboard).
 
 ## Recurring events
 
@@ -59,7 +59,7 @@ role to delete events.
 
 ## Automatic deletion
 
-If desired, Divinité can be configured to automatically archive past events with
+If desired, Martin can be configured to automatically archive past events with
 the `/settings auto_archive` command.
 
 By default events will be auto archived two hours after they end, but this

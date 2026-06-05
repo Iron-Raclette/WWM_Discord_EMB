@@ -640,7 +640,7 @@ export default function DashboardPage() {
         <div className="rh-edit-grid">
           <input placeholder="id (ex: boss_rush)" value={newTemplate.id} onChange={(e) => setNewTemplate({...newTemplate, id: e.target.value})} />
           <input placeholder="Titre" value={newTemplate.title} onChange={(e) => setNewTemplate({...newTemplate, title: e.target.value})} />
-          <select value={newTemplate.mode} onChange={(e) => setNewTemplate({...newTemplate, mode: e.target.value})}><option value="heroesrealm">heroes realm</option><option value="social">social</option><option value="announce">announce</option></select>
+          <select value={newTemplate.mode} onChange={(e) => setNewTemplate({...newTemplate, mode: e.target.value})}><option value="raid">raid</option><option value="social">social</option><option value="announce">announce</option></select>
           <input placeholder="Capacité (vide = illimité)" value={newTemplate.capacity} onChange={(e) => setNewTemplate({...newTemplate, capacity: e.target.value})} />
         </div>
         <div className="rh-actions-row"><button className="rh-green" onClick={upsertTemplate}>Ajouter / Mettre à jour</button></div>

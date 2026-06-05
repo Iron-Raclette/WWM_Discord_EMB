@@ -1,4 +1,4 @@
-# Divinité Bot — version Vercel (refonte)
+# Where Winds Meet - Event Manager — version Vercel (Merci Divinité / Asel mdr)
 
 Ce projet utilise maintenant **Discord Interactions + Vercel Functions** (pas de process permanent).
 

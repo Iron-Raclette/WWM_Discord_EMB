@@ -1,5 +1,5 @@
 ---
-description: The fundamentals for creating events with Divinité.
+description: The fundamentals for creating events with Martin.
 slug: /creating_events
 sidebar_position: 1
 ---
@@ -10,10 +10,10 @@ Events are created with the `/event` command.
 
 :::info
 Event creation occurs in a **direct message**, so you must be able to receive direct
-messages from Divinité.
+messages from Martin.
 :::
 
-Divinité will then walk you through a guided event creation process, asking you to
+Martin will then walk you through a guided event creation process, asking you to
 provide the following:
 
 - The name of the event

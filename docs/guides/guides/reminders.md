@@ -6,9 +6,9 @@ sidebar_position: 5
 
 # Reminders
 
-By default, Divinité will send a reminder to event attendees prior to the scheduled start time of the event. Each event can have multiple reminders, each with its own timing.
+By default, Martin will send a reminder to event attendees prior to the scheduled start time of the event. Each event can have multiple reminders, each with its own timing.
 
-When it's time to send a reminder, Divinité will create a public thread on the event and send a reminder in the thread that mentions relevant attendees. If a thread already exists for the event, Divinité will send a reminder in the existing thread.
+When it's time to send a reminder, Martin will create a public thread on the event and send a reminder in the thread that mentions relevant attendees. If a thread already exists for the event, Martin will send a reminder in the existing thread.
 
 ## Setting up reminders
 

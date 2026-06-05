@@ -5,13 +5,9 @@ sidebar_position: 6
 ---
 
 # Attendee roles
-
-[Divinité](https://divinite-bot.dev) allows event organizers to
-configure a Discord role to add to event attendees.
-
 There are two options for assigning a role to attendees:
 
-- Have Divinité create a [temporary role](#temporary-attendee-roles) for you; or
+- Have Martin create a [temporary role](#temporary-attendee-roles) for you; or
 - Use an [existing role](#persistent-attendee-roles) on your server
 
 Once an attendee role is setup, attendees will be given the role when they sign
@@ -19,12 +15,12 @@ up for the event. The role will be removed from attendees when they remove their
 signup, or the event is deleted.
 
 :::warning Permission check
-Divinité must have the `Manage Roles` permission in order to assign roles to
+Martin must have the `Manage Roles` permission in order to assign roles to
 attendees.
 :::
 
 ## Temporary attendee roles
-When using a temporary role, Divinité will create a role in the format of:
+When using a temporary role, Martin will create a role in the format of:
 ```
 divinite-<event_name>-<event_number>
 ```
@@ -38,7 +34,7 @@ modified to no longer have a temporary attendee role.
 
 ### Enable by default
 
-If desired, Divinité can be configured to create a temporary attendee role for all
+If desired, Martin can be configured to create a temporary attendee role for all
 new events by default with `/settings temp_roles on`.
 
 This command requires the `Manage Server` permission to invoke.
@@ -50,19 +46,19 @@ per event basis.
 
 ## Persistent attendee roles
 
-When using an existing role as the attendee role, Divinité will add and remove the
+When using an existing role as the attendee role, Martin will add and remove the
 role to attendees as they update their responses.
 
 When the event is deleted, the role will be removed from all attendees.
 
 :::note
-Divinité will not allow users to assign a persistent attendee role if they
+Martin will not allow users to assign a persistent attendee role if they
 don't personally have permission to `Manage Roles` on the server.
 :::
 
 :::warning
 When using a persistent attendee role, the role must be **below**
-Divinité's highest role in the role hierarchy list, otherwise Divinité will not
+Martin's highest role in the role hierarchy list, otherwise Martin will not
 be able to add the role to attendees.
 :::
 
@@ -86,7 +82,7 @@ signup, but it will also occur if the event is deleted.
 An attendee role can be configured during event creation on the advanced options
 prompt (the last prompt when creating an event).
 
-When the attendee role option is selected, you’ll have the option to let Divinité
+When the attendee role option is selected, you’ll have the option to let Martin
 create a temporary attendee role, or to specify an existing role to assign to
 attendees.
 
