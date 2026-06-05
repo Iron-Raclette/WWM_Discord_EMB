@@ -1,0 +1,82 @@
+---
+description: Restrict who can signup for specific events.
+slug: /signup_restrictions
+sidebar_position: 7
+---
+
+import Figure from '../figure';
+
+# Signup restrictions
+
+With an active fonctionnalités avancées subscription, Divinité can
+be configured to restrict event signups. Signup restrictions allow you to
+ensure that unwanted users aren't signing up for events, and that users aren't
+modifying their signups when they shouldn't be.
+
+There are two types of restrictions:
+
+- Discord roles permitted to signup
+- Time based signup cutoff times
+
+:::info
+Regardless of what event restrictions are in place, the event organizer
+(or an admin) can always manually modify user signups.
+:::
+
+## Discord role restrictions
+
+A Discord role restriction is a _whitelist_ of Discord roles that are permitted
+to signup for an event. A user needs _one of_ the roles listed to qualify for
+the event.
+
+Role restrictions can exist at the event level and at the signup option level.
+Event level restrictions apply to all signup options, while signup option level
+restrictions apply only to the corresponding signup option.
+
+:::info
+If both event and signup option restrictions are in place, the user must
+pass both checks. In other words, the user needs to have _one of_ the
+event level restricted roles, and _one of_ the signup option level
+restricted roles.
+:::
+
+### Set event level restrictions
+
+At the last step of event creation, select the option to restrict signups to
+certain roles. Follow the prompts, and enter the names of the Discord roles
+required to signup for the event.
+
+<Figure caption="Require attendees to have either the avancées or Staff role" src="/img/restrictions/event_level.gif" />
+
+### Set signup option level restrictions
+
+Restrictions can be set individually for each signup option. During event
+creation, select the option to customize signup options. From here, you'll
+be able to add, remove, and modify signup options, including signup option
+level restrictions.
+
+<Figure caption='Require "Accepted" users to have the avancées role' src="/img/restrictions/option_level.gif" />
+
+## Signup cutoff
+
+A signup cutoff can be put in place, where after a specified time, users will
+no longer be able to add, remove, or otherwise modify their response.
+
+Signups can be set to cutoff:
+
+- When the event starts; _or_
+- A period of time before the event starts; _or_
+- A period of time after the event starts
+
+If a user attempts to signup for an event that is closed, they'll receive a
+message from Divinité indicating that signups are closed. The message will link
+to the event organizer's profile so the user knows who to contact about any issues.
+
+<Figure caption="A notification that signups are closed" src="/img/restrictions/notify.png" />
+
+### Set a cutoff time
+
+To set a time for signups to cutoff, select the option to set a time for
+signups to close at the last step of event creation.
+
+<Figure caption="Set signups to close 2 hours before the event starts" src="/img/restrictions/set_cutoff.gif" />

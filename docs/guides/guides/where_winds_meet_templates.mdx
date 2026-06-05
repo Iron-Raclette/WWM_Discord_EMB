@@ -1,0 +1,91 @@
+---
+description: Configure one-click event creation templates and role specialization flows for Where Winds Meet.
+slug: /where_winds_meet_templates
+sidebar_position: 6
+---
+
+# Where Winds Meet setup (Donjon / Raid / GvG)
+
+This guide shows how to configure Apollo so your members can create events faster with consistent templates for **Donjon**, **Raid**, and **GvG**.
+
+## 1) Create an event channel with a one-click create button
+
+Run `/channel new` (or convert an existing channel) to create an event channel. Event channels add a persistent button at the top of the channel to start event creation quickly.
+
+## 2) Prepare your signup options (Tank / Dps / Healer + Bench)
+
+Create your signup options with:
+
+- `/signup_options add` for **Tank**
+- `/signup_options add` for **Dps**
+- `/signup_options add` for **Healer**
+- `/signup_options add` for **Bench**
+
+You can also keep **Late**, **Tentative**, and **Absence** depending on your organization style.
+
+## 3) Add class/specialization buttons for each role
+
+If you want extra buttons to appear after someone clicks **Dps**, **Tank**, or **Healer** (for example class specializations like in your screenshots), configure each role option with specialization sub-options during signup option setup.
+
+Recommended layout:
+
+- **Dps**: 4 specialization buttons
+- **Tank**: specialization button(s)
+- **Healer**: specialization button(s)
+
+:::info
+These specialization buttons are configured as option-level sub-selections in your signup setup so members first choose role, then specialization.
+:::
+
+## 4) Build three reusable presets
+
+Create three preset groups with `/signup_presets add`:
+
+### Preset 1: Donjon
+
+- Event title: **Donjon**
+- Capacity: **5**
+- Include **Bench** as overflow queue
+
+### Preset 2: Raid
+
+- Event title: **Raid**
+- Capacity: **10**
+- Include **Bench** as overflow queue
+
+### Preset 3: GvG
+
+- Event title: **GvG**
+- Capacity: **50**
+- Include **Bench** as overflow queue
+
+When creating an event, select the matching preset and only set date/time.
+
+## 5) Enforce a 10-minute reminder
+
+Set the server default reminder to 10 minutes before event start:
+
+- `/settings reminder_interval` → **10 minutes**
+
+You can still customize reminders per event in advanced options.
+
+## 6) Enable recurring events
+
+During event creation, set a recurrence pattern (daily/weekly/etc.).
+
+For edits on future occurrences without changing the current post, use `/edit` and choose to modify the recurring series.
+
+## 7) Archive past events automatically
+
+Turn on auto-archiving for old events:
+
+- `/settings auto_archive`
+- `/settings auto_archive_interval`
+
+This keeps channels clean while preserving history.
+
+## Hosting notes
+
+Apollo is a hosted Discord bot service. You typically **do not self-host Apollo** on platforms like Vercel.
+
+If you are building your **own custom bot fork** instead, Vercel is usually not ideal for long-running Discord gateway processes. Prefer a host designed for always-on workers/services (for example Railway, Fly.io, Render, or a VPS).

@@ -1,0 +1,13 @@
+{
+  "name": "divinite-vercel-tools",
+  "version": "2.0.0",
+  "description": "Scripts to register Divinit\u00e9 slash commands for the Vercel interactions bot.",
+  "main": "scripts/register-commands.js",
+  "type": "commonjs",
+  "scripts": {
+    "register:commands": "node scripts/register-commands.js",
+    "check": "node --check ../api/interactions.js && node --check ../api/cron/events.js && node --check ../api/register-commands.js && node --check ../api/bot-avatar.js && node --check ../api/events.js && node --check ../lib/diviniteEvents.js && node --check ../lib/components.js && node --check ../lib/discordApi.js && node --check ../lib/vercelStore.js && node --check ../lib/commands.js && node --check scripts/update-avatar.js",
+    "check:commands": "node scripts/check-commands.js",
+    "bot:avatar": "node scripts/update-avatar.js"
+  }
+}
