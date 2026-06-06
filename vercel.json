@@ -1,10 +1,4 @@
 {
   "installCommand": "npm ci --no-audit --prefer-offline",
   "buildCommand": "npm run build"
-  "crons": [
-    {
-      "path": "/api/cron/event",
-      "schedule": "* * * * *"
-    }
-  ]
 }
