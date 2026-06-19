@@ -1,12 +1,12 @@
-const { getAllEvents, saveEvent, newEvent, nextRecurrenceTimestamp } = require('../../lib/racletteEvents'); // TO CHANGE
+const { getAllEvents, saveEvent, newEvent, nextRecurrenceTimestamp } = require('../../lib/racletteEvents');
 const { sendChannelMessage, editChannelMessage, deleteChannelMessage } = require('../../lib/discordApi');
 const { getJson, setJson, mgetJson } = require('../../lib/vercelStore');
 
-const ARCHIVE_LOG_CHANNEL_ID = process.env.ARCHIVE_LOG_CHANNEL_ID || '1512519488208375828'; // ID TO CHANGE HERE
-const EVENT_PING_ROLE_ID = process.env.EVENT_PING_ROLE_ID || '1512495672572641361';
+const ARCHIVE_LOG_CHANNEL_ID = process.env.ARCHIVE_LOG_CHANNEL_ID || '1517640364868112565'; // ID TO CHANGE HERE
+const EVENT_PING_ROLE_ID = process.env.EVENT_PING_ROLE_ID || '1442593556215758989';
 const LEGACY_ROLE_IDS = new Set([]);
 const { eventButtons, eventEmbed } = require('../../lib/components');
-const TEMP_VOCAL_TRIGGER_CHANNEL_ID = process.env.TEMP_VOCAL_TRIGGER_CHANNEL_ID || '1512143389859250302';
+const TEMP_VOCAL_TRIGGER_CHANNEL_ID = process.env.TEMP_VOCAL_TRIGGER_CHANNEL_ID || '1439389839467483189';
 const TEN_MIN_REMINDER_WINDOW_MS = 15 * 60 * 1000;
 const START_PING_WINDOW_MS = 30 * 60 * 1000;
 const EARLY_TRIGGER_LEEWAY_MS = 60 * 1000;

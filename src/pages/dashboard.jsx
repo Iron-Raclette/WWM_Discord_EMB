@@ -19,10 +19,10 @@ const RECURRENCE_DAYS = [{value: 'lun', label: 'Lun'}, {value: 'mar', label: 'Ma
 const WEEKDAY_INDEX = {dim: 0, lun: 1, mar: 2, mer: 3, jeu: 4, ven: 5, sam: 6};
 const TIMEZONES = (typeof Intl !== 'undefined' && Intl.supportedValuesOf) ? Intl.supportedValuesOf('timeZone') : ['Europe/Paris', 'Asia/Tokyo', 'UTC'];
 const BASE_PING_ROLES = [
-  {id: '1512495672572641361', name: 'Event'},  //ID A CHANGER ICI - ROLES
-  {id: '1512495587315159102', name: 'PvE Lead'},
-  {id: '1512495540569374831', name: 'Guild Master'},
-  {id: '1512495635776012290', name: 'PvP Lead'}
+  {id: '1442593556215758989', name: 'Event'},  //ID A CHANGER ICI - ROLES
+  {id: '0', name: 'PvE Lead'},
+  {id: '1439587669544931480', name: 'Guild Master'},
+  {id: '0', name: 'PvP Lead'}
 ];
 
 const BUILTIN_TEMPLATES = [
@@ -229,7 +229,7 @@ export default function DashboardPage() {
     setPhrases(config.phrases || []);
     setPendingPhrases(config.phrasesPending || []);
 
-    const guild = nextSettings.guildId || settings.guildId || '1512143388940566588'; //ID A CHANGER ICI - CHANNEL
+    const guild = nextSettings.guildId || settings.guildId || '1460271812410736826'; //ID A CHANGER ICI - CHANNEL
     const [current, channelsRes] = await Promise.all([
       api(`/api/events?guild_id=${guild}&only=current`),
       api(`/api/guild-channels?guild_id=${guild}`)

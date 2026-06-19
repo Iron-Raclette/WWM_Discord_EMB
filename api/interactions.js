@@ -12,12 +12,12 @@ const flowTimezoneByNonce = new Map();
 const flowMediaUrlByNonce = new Map();
 const flowMediaFileByNonce = new Map();
 const flowScheduleByNonce = new Map();
-const ARCHIVE_LOG_CHANNEL_ID = process.env.ARCHIVE_LOG_CHANNEL_ID || '1512519488208375828'; // ID TO CHANGE HERE
+const ARCHIVE_LOG_CHANNEL_ID = process.env.ARCHIVE_LOG_CHANNEL_ID || '1517640364868112565'; // ID TO CHANGE HERE
 const DEFAULT_TIMEZONE = process.env.EVENT_TIMEZONE || 'Europe/Paris';
 const WEEKDAY_INDEX = { dim: 0, lun: 1, mar: 2, mer: 3, jeu: 4, ven: 5, sam: 6 };
-const GUILD_EVENT_CHANNEL_ID = process.env.GUILD_EVENT_CHANNEL_ID || '1512499011641413803';
-const GVG_EVENT_CHANNEL_ID = process.env.GVG_EVENT_CHANNEL_ID || '1512520519973470290';
-const EVENT_PING_ROLE_ID = process.env.EVENT_PING_ROLE_ID || '1512495672572641361';
+const GUILD_EVENT_CHANNEL_ID = process.env.GUILD_EVENT_CHANNEL_ID || '1457445763478065232';
+const GVG_EVENT_CHANNEL_ID = process.env.GVG_EVENT_CHANNEL_ID || '1460271812410736826';
+const EVENT_PING_ROLE_ID = process.env.EVENT_PING_ROLE_ID || '1442593556215758989';
 const COMMAND_SYNC_TTL_MS = 15 * 60 * 1000;
 const commandSyncByGuild = new Map();
 
@@ -723,7 +723,7 @@ module.exports = async function handler(req, res) {
     if (name === 'cancel-event') {
       const id = String(commandOption(body, 'event_id') || '').trim();
       const event = await getEvent(id);
-      if (!event || event.guildId !== body.guild_id) return json(res, privateMessage('Event introuvable.'));
+      if (!event || event.guildId !== body.guild_id) return json(res, privateMessage('Event introuvable. **Fait un effort.**'));
       const userId = body.member?.user?.id;
       if (!event.organizerId || event.organizerId !== userId) return json(res, ephemeralMessage('Seul l\'organisateur peut supprimer cet event.'));
       if (event.createdVia === 'dashboard') return json(res, ephemeralMessage('Cet event a été créé depuis le dashboard et ne peut être supprimé que depuis le dashboard.'));

@@ -6,13 +6,13 @@ const PHRASES_KEY = 'config:phrases';
 const PHRASES_PENDING_KEY = 'config:phrases_pending';
 
 const defaultSettings = { // ID TO CHANGE HERE
-  guildId: process.env.DEFAULT_GUILD_ID || '1512143388940566588', // Discord Server ID
-  channelId: process.env.DEFAULT_CHANNEL_ID || '1512143389859250301', //General Channel?
-  guildEventChannelId: process.env.GUILD_EVENT_CHANNEL_ID || '1512499011641413803',
+  guildId: process.env.DEFAULT_GUILD_ID || '1439389838343274599', // Discord Server ID
+  channelId: process.env.DEFAULT_CHANNEL_ID || '1439591375329820734', //General Channel?
+  guildEventChannelId: process.env.GUILD_EVENT_CHANNEL_ID || '1457445763478065232',
   timezone: process.env.EVENT_TIMEZONE || 'Europe/Paris',
-  archiveLogChannelId: process.env.ARCHIVE_LOG_CHANNEL_ID || '1512519488208375828',
-  eventPingRoleId: process.env.EVENT_PING_ROLE_ID || '1512495672572641361',
-  tempVocalTriggerChannelId: '1512143389859250302',
+  archiveLogChannelId: process.env.ARCHIVE_LOG_CHANNEL_ID || '1517640364868112565',
+  eventPingRoleId: process.env.EVENT_PING_ROLE_ID || '1442593556215758989',
+  tempVocalTriggerChannelId: '1439389839467483189',
   gvgFixedPlayers: [],
   gvgRotatingPlayers: []
 };
@@ -22,7 +22,7 @@ function sanitizeSettings(settings = {}) {
   const next = { ...settings };
   delete next.membreRoleId;
   delete next.apprentiRoleId;
-  if (!next.eventPingRoleId) next.eventPingRoleId = process.env.EVENT_PING_ROLE_ID || '1512495672572641361'; // ID TO CHANGE HERE - PING ROLE
+  if (!next.eventPingRoleId) next.eventPingRoleId = process.env.EVENT_PING_ROLE_ID || '1442593556215758989'; // ID TO CHANGE HERE - PING ROLE
   return next;
 }
 

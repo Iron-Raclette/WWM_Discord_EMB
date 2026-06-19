@@ -1,12 +1,12 @@
-const { getAllEvents, getEvent, saveEvent, newEvent } = require('../lib/racletteEvents'); // TO CHANGE
+const { getAllEvents, getEvent, saveEvent, newEvent } = require('../lib/racletteEvents');
 const { sendChannelMessage, sendChannelMessageWithAttachment, editChannelMessage, editChannelMessageWithAttachment, deleteChannelMessage, getGuildMemberDisplayName } = require('../lib/discordApi');
 const { eventButtons, eventEmbed } = require('../lib/components');
 
 const DEFAULT_TIMEZONE = process.env.EVENT_TIMEZONE || 'Europe/Paris';
-const ARCHIVE_LOG_CHANNEL_ID = process.env.ARCHIVE_LOG_CHANNEL_ID || '1512519488208375828'; // ID TO CHANGE HERE
-const GUILD_EVENT_CHANNEL_ID = process.env.GUILD_EVENT_CHANNEL_ID || '1512499011641413803';
-const GVG_EVENT_CHANNEL_ID = process.env.GVG_EVENT_CHANNEL_ID || '1512520519973470290';
-const EVENT_PING_ROLE_ID = process.env.EVENT_PING_ROLE_ID || '1512495672572641361';
+const ARCHIVE_LOG_CHANNEL_ID = process.env.ARCHIVE_LOG_CHANNEL_ID || '1517640364868112565'; // ID TO CHANGE HERE
+const GUILD_EVENT_CHANNEL_ID = process.env.GUILD_EVENT_CHANNEL_ID || '1457445763478065232';
+const GVG_EVENT_CHANNEL_ID = process.env.GVG_EVENT_CHANNEL_ID || '1460271812410736826';
+const EVENT_PING_ROLE_ID = process.env.EVENT_PING_ROLE_ID || '1442593556215758989';
 
 function eventComponentsFor(event) {
   return eventButtons(event.id, !!event.archived, event.mode);
